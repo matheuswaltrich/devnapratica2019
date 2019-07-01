@@ -1,0 +1,98 @@
+"resources": [
+	{
+		"name": "aluno",
+		"label": "usuarios.userManager.furb_basico_entities_aluno_label",
+		"description": "usuarios.userManager.furb_basico_entities_aluno_description",
+		"URI": "res://senior.com.br/furb/basico/entities/aluno",
+		"actions" : [
+		    {
+		    	"name": "Incluir",
+		    	"label": "usuarios.userManager.furb_basico_entities_aluno_action_incluir_label"
+		    },
+		    {
+		    	"name": "Editar",
+		    	"label": "usuarios.userManager.furb_basico_entities_aluno_action_editar_label"
+		    },
+		    {
+		    	"name": "Excluir",
+		    	"label": "usuarios.userManager.furb_basico_entities_aluno_action_excluir_label"
+		    },
+		    {
+		    	"name": "Visualizar",
+		    	"label": "usuarios.userManager.furb_basico_entities_aluno_action_visualizar_label"
+		    }
+		]
+	},
+	{
+		"name": "professor",
+		"label": "usuarios.userManager.furb_basico_entities_professor_label",
+		"description": "usuarios.userManager.furb_basico_entities_professor_description",
+		"URI": "res://senior.com.br/furb/basico/entities/professor",
+		"actions" : [
+		    {
+		    	"name": "Incluir",
+		    	"label": "usuarios.userManager.furb_basico_entities_professor_action_incluir_label"
+		    },
+		    {
+		    	"name": "Editar",
+		    	"label": "usuarios.userManager.furb_basico_entities_professor_action_editar_label"
+		    },
+		    {
+		    	"name": "Excluir",
+		    	"label": "usuarios.userManager.furb_basico_entities_professor_action_excluir_label"
+		    },
+		    {
+		    	"name": "Visualizar",
+		    	"label": "usuarios.userManager.furb_basico_entities_professor_action_visualizar_label"
+		    }
+		]
+	},
+	{
+		"name": "materia",
+		"label": "usuarios.userManager.furb_basico_entities_materia_label",
+		"description": "usuarios.userManager.furb_basico_entities_materia_description",
+		"URI": "res://senior.com.br/furb/basico/entities/materia",
+		"actions" : [
+		    {
+		    	"name": "Incluir",
+		    	"label": "usuarios.userManager.furb_basico_entities_materia_action_incluir_label"
+		    },
+		    {
+		    	"name": "Editar",
+		    	"label": "usuarios.userManager.furb_basico_entities_materia_action_editar_label"
+		    },
+		    {
+		    	"name": "Excluir",
+		    	"label": "usuarios.userManager.furb_basico_entities_materia_action_excluir_label"
+		    },
+		    {
+		    	"name": "Visualizar",
+		    	"label": "usuarios.userManager.furb_basico_entities_materia_action_visualizar_label"
+		    }
+		]
+	},
+	{
+		"name": "turma",
+		"label": "usuarios.userManager.furb_basico_entities_turma_label",
+		"description": "usuarios.userManager.furb_basico_entities_turma_description",
+		"URI": "res://senior.com.br/furb/basico/entities/turma",
+		"actions" : [
+		    {
+		    	"name": "Incluir",
+		    	"label": "usuarios.userManager.furb_basico_entities_turma_action_incluir_label"
+		    },
+		    {
+		    	"name": "Editar",
+		    	"label": "usuarios.userManager.furb_basico_entities_turma_action_editar_label"
+		    },
+		    {
+		    	"name": "Excluir",
+		    	"label": "usuarios.userManager.furb_basico_entities_turma_action_excluir_label"
+		    },
+		    {
+		    	"name": "Visualizar",
+		    	"label": "usuarios.userManager.furb_basico_entities_turma_action_visualizar_label"
+		    }
+		]
+	}
+]

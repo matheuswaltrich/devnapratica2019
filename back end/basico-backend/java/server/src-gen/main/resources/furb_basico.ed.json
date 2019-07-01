@@ -1,0 +1,602 @@
+{
+	"version": "develop-SNAPSHOT",
+	"edlVersion": "13.3.2",
+	"app": "furb-basico",
+	"domain": "furb",
+	"service": "basico",
+	"enumType": "ordinal",
+	"enumerations": {
+	},
+	"entities": {
+		"aluno": {
+			"id": "id",
+			"name": "aluno",
+			"customizable": false,
+			"slots": {
+				"id": {
+					"name": "id",
+					"type": "string",
+					"format": "uuid",
+					"optional": true,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": true
+				},
+				"nome": {
+					"name": "nome",
+					"type": "string",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				},
+				"dataNascimento": {
+					"name": "dataNascimento",
+					"type": "date",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				},
+				"cpf": {
+					"name": "cpf",
+					"type": "string",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				},
+				"devedor": {
+					"name": "devedor",
+					"type": "boolean",
+					"optional": true,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false,
+					"default": false
+				}
+			},
+			"lookup": {
+				"searchFields": [
+					{
+						"name": "id",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "nome",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "dataNascimento",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "cpf",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "devedor",
+						"optional": true,
+						"multiple": false
+					}
+				],
+				"displayFields": [
+					"id",
+					"nome",
+					"dataNascimento",
+					"cpf",
+					"devedor"
+				]
+			},
+			"advancedSearch": {
+				"searchFields": [
+					{
+						"name": "id",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "nome",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "dataNascimento",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "cpf",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "devedor",
+						"optional": true,
+						"multiple": false
+					}
+				],
+				"displayFields": [
+					"id",
+					"nome",
+					"dataNascimento",
+					"cpf",
+					"devedor"
+				]
+			}
+		},
+		"professor": {
+			"id": "id",
+			"name": "professor",
+			"customizable": false,
+			"slots": {
+				"id": {
+					"name": "id",
+					"type": "string",
+					"format": "uuid",
+					"optional": true,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": true
+				},
+				"nome": {
+					"name": "nome",
+					"type": "string",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				},
+				"dataNascimento": {
+					"name": "dataNascimento",
+					"type": "date",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				},
+				"cpf": {
+					"name": "cpf",
+					"type": "string",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				}
+			},
+			"lookup": {
+				"searchFields": [
+					{
+						"name": "id",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "nome",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "dataNascimento",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "cpf",
+						"optional": true,
+						"multiple": false
+					}
+				],
+				"displayFields": [
+					"id",
+					"nome",
+					"dataNascimento",
+					"cpf"
+				]
+			},
+			"advancedSearch": {
+				"searchFields": [
+					{
+						"name": "id",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "nome",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "dataNascimento",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "cpf",
+						"optional": true,
+						"multiple": false
+					}
+				],
+				"displayFields": [
+					"id",
+					"nome",
+					"dataNascimento",
+					"cpf"
+				]
+			}
+		},
+		"materia": {
+			"id": "id",
+			"name": "materia",
+			"customizable": false,
+			"slots": {
+				"id": {
+					"name": "id",
+					"type": "string",
+					"format": "uuid",
+					"optional": true,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": true
+				},
+				"nome": {
+					"name": "nome",
+					"type": "string",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				}
+			},
+			"lookup": {
+				"searchFields": [
+					{
+						"name": "id",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "nome",
+						"optional": true,
+						"multiple": false
+					}
+				],
+				"displayFields": [
+					"id",
+					"nome"
+				]
+			},
+			"advancedSearch": {
+				"searchFields": [
+					{
+						"name": "id",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "nome",
+						"optional": true,
+						"multiple": false
+					}
+				],
+				"displayFields": [
+					"id",
+					"nome"
+				]
+			}
+		},
+		"turma": {
+			"id": "id",
+			"name": "turma",
+			"customizable": false,
+			"slots": {
+				"id": {
+					"name": "id",
+					"type": "string",
+					"format": "uuid",
+					"optional": true,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": true
+				},
+				"materia": {
+					"name": "materia",
+					"type": "materia",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				},
+				"professor": {
+					"name": "professor",
+					"type": "professor",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				},
+				"alunos": {
+					"name": "alunos",
+					"type": "aluno",
+					"optional": false,
+					"hidden": false,
+					"multivalued": true,
+					"readOnly": false
+				},
+				"vagas": {
+					"name": "vagas",
+					"type": "integer",
+					"optional": false,
+					"hidden": false,
+					"multivalued": false,
+					"readOnly": false
+				}
+			},
+			"lookup": {
+				"searchFields": [
+					{
+						"name": "id",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "vagas",
+						"optional": true,
+						"multiple": false
+					}
+				],
+				"displayFields": [
+					"id",
+					"vagas"
+				]
+			},
+			"advancedSearch": {
+				"searchFields": [
+					{
+						"name": "id",
+						"optional": true,
+						"multiple": false
+					},
+					{
+						"name": "vagas",
+						"optional": true,
+						"multiple": false
+					}
+				],
+				"displayFields": [
+					"id",
+					"vagas"
+				]
+			},
+			"relationships": {
+				"aluno": [
+					{
+						"type": "aggregation",
+						"attribute": "alunos",
+						"ownerEntity": "turma",
+						"entityName": "aluno",
+						"optional": false,
+						"filterDependent": false,
+						"multivalued": true,
+						"lookup": {
+							"searchFields": [
+								{
+									"name": "id",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "nome",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "dataNascimento",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "cpf",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "devedor",
+									"optional": true,
+									"multiple": false
+								}
+							],
+							"displayFields": [
+								"id",
+								"nome",
+								"dataNascimento",
+								"cpf",
+								"devedor"
+							]
+						},
+						"advancedSearch": {
+							"searchFields": [
+								{
+									"name": "id",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "nome",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "dataNascimento",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "cpf",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "devedor",
+									"optional": true,
+									"multiple": false
+								}
+							],
+							"displayFields": [
+								"id",
+								"nome",
+								"dataNascimento",
+								"cpf",
+								"devedor"
+							]
+						}
+					}
+				]
+				,"materia": [
+					{
+						"type": "aggregation",
+						"attribute": "materia",
+						"ownerEntity": "turma",
+						"entityName": "materia",
+						"optional": false,
+						"filterDependent": false,
+						"multivalued": false,
+						"lookup": {
+							"searchFields": [
+								{
+									"name": "id",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "nome",
+									"optional": true,
+									"multiple": false
+								}
+							],
+							"displayFields": [
+								"id",
+								"nome"
+							]
+						},
+						"advancedSearch": {
+							"searchFields": [
+								{
+									"name": "id",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "nome",
+									"optional": true,
+									"multiple": false
+								}
+							],
+							"displayFields": [
+								"id",
+								"nome"
+							]
+						}
+					}
+				]
+				,"professor": [
+					{
+						"type": "aggregation",
+						"attribute": "professor",
+						"ownerEntity": "turma",
+						"entityName": "professor",
+						"optional": false,
+						"filterDependent": false,
+						"multivalued": false,
+						"lookup": {
+							"searchFields": [
+								{
+									"name": "id",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "nome",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "dataNascimento",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "cpf",
+									"optional": true,
+									"multiple": false
+								}
+							],
+							"displayFields": [
+								"id",
+								"nome",
+								"dataNascimento",
+								"cpf"
+							]
+						},
+						"advancedSearch": {
+							"searchFields": [
+								{
+									"name": "id",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "nome",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "dataNascimento",
+									"optional": true,
+									"multiple": false
+								},
+								{
+									"name": "cpf",
+									"optional": true,
+									"multiple": false
+								}
+							],
+							"displayFields": [
+								"id",
+								"nome",
+								"dataNascimento",
+								"cpf"
+							]
+						}
+					}
+				]
+			}
+		}
+	},
+	"translations": {
+		"furb.basico.aluno": "aluno",
+		"furb.basico.aluno_id": "Chave primaria",
+		"furb.basico.aluno_nome": "Nome do aluno",
+		"furb.basico.aluno_data_nascimento": "Data de nascimento",
+		"furb.basico.aluno_cpf": "CPF do cliente",
+		"furb.basico.aluno_devedor": "Pagamento em dia",
+		"furb.basico.professor": "professor",
+		"furb.basico.professor_id": "Chave primaria",
+		"furb.basico.professor_nome": "Nome do professor",
+		"furb.basico.professor_data_nascimento": "Data de nascimento",
+		"furb.basico.professor_cpf": "CPF do cliente",
+		"furb.basico.materia": "materia",
+		"furb.basico.materia_id": "Chave primaria",
+		"furb.basico.materia_nome": "nome Materia",
+		"furb.basico.turma": "turma",
+		"furb.basico.turma_id": "Chave primaria",
+		"furb.basico.turma_materia": "Materia Turma",
+		"furb.basico.turma_professor": "Professor Materia",
+		"furb.basico.turma_alunos": "Alunos Tuma",
+		"furb.basico.turma_vagas": "Quantidade Vagas Turma"
+	}
+}

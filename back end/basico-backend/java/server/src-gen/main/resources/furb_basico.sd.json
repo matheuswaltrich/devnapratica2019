@@ -1,0 +1,1819 @@
+{
+    "appName": "furb-basico",
+    "domain": "furb",
+    "name": "basico",
+    "version": "${version}",
+    "commands" : {
+        "createBulkTurma": {
+            "endpointType" : "command",
+            "kind": "createBulk",
+            "documentation": "The 'createBulk' request primitive for the Turma entity.",
+            "input" : {
+                "entities" : {
+                    "type": "turma",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createMergeTurma": {
+            "endpointType" : "command",
+            "kind": "createMerge",
+            "documentation": "The 'createMerge' request primitive for the Turma entity.",
+            "input" : "turma",
+            "output" : "turma",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "updateAluno": {
+            "endpointType" : "command",
+            "kind": "update",
+            "documentation": "The 'update' request primitive for the Aluno entity.",
+            "input" : "aluno",
+            "output" : "aluno",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "listProfessor": {
+            "endpointType" : "command",
+            "kind": "list",
+            "documentation": "The 'list' request primitive for the Professor entity.",
+            "input" : {
+                "offset" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "size" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "orderBy" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "filter" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "displayFields" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "contents" : {
+                    "type": "professor",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createBulkMateria": {
+            "endpointType" : "command",
+            "kind": "createBulk",
+            "documentation": "The 'createBulk' request primitive for the Materia entity.",
+            "input" : {
+                "entities" : {
+                    "type": "materia",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "listTurma": {
+            "endpointType" : "command",
+            "kind": "list",
+            "documentation": "The 'list' request primitive for the Turma entity.",
+            "input" : {
+                "offset" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "size" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "orderBy" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "filter" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "displayFields" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "contents" : {
+                    "type": "turma",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createMateria": {
+            "endpointType" : "command",
+            "kind": "create",
+            "documentation": "The 'create' request primitive for the Materia entity.",
+            "input" : "materia",
+            "output" : "materia",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "deleteMateria": {
+            "endpointType" : "command",
+            "kind": "delete",
+            "documentation": "The 'delete' request primitive for the Materia entity.",
+            "input" : {
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": false,
+                    "multivalued": false,
+                	"readOnly": true
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "exportProfessor": {
+            "endpointType" : "command",
+            "kind": "query",
+            "idempotent": true,
+            "input" : {
+                "config" : {
+                    "type": "exportConfig",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "exportJobId" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "updateMergeProfessor": {
+            "endpointType" : "command",
+            "kind": "updateMerge",
+            "documentation": "The 'updateMerge' request primitive for the Professor entity.",
+            "input" : "professor",
+            "output" : "professor",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "updateMergeMateria": {
+            "endpointType" : "command",
+            "kind": "updateMerge",
+            "documentation": "The 'updateMerge' request primitive for the Materia entity.",
+            "input" : "materia",
+            "output" : "materia",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "exportTurma": {
+            "endpointType" : "command",
+            "kind": "query",
+            "idempotent": true,
+            "input" : {
+                "config" : {
+                    "type": "exportConfig",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "exportJobId" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createProfessor": {
+            "endpointType" : "command",
+            "kind": "create",
+            "documentation": "The 'create' request primitive for the Professor entity.",
+            "input" : "professor",
+            "output" : "professor",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createBulkAluno": {
+            "endpointType" : "command",
+            "kind": "createBulk",
+            "documentation": "The 'createBulk' request primitive for the Aluno entity.",
+            "input" : {
+                "entities" : {
+                    "type": "aluno",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "updateProfessor": {
+            "endpointType" : "command",
+            "kind": "update",
+            "documentation": "The 'update' request primitive for the Professor entity.",
+            "input" : "professor",
+            "output" : "professor",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "listMateria": {
+            "endpointType" : "command",
+            "kind": "list",
+            "documentation": "The 'list' request primitive for the Materia entity.",
+            "input" : {
+                "offset" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "size" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "orderBy" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "filter" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "displayFields" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "contents" : {
+                    "type": "materia",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "importMateria": {
+            "endpointType" : "command",
+            "kind": "action",
+            "input" : {
+                "config" : {
+                    "type": "importConfig",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "importJobId" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "importAluno": {
+            "endpointType" : "command",
+            "kind": "action",
+            "input" : {
+                "config" : {
+                    "type": "importConfig",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "importJobId" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "getMetadata": {
+            "endpointType" : "command",
+            "kind": "query",
+            "documentation": "Default 'getMetadata' query. Every service must handle this command and return metadata in the format requested.",
+            "idempotent": true,
+            "input" : {
+                "metadataFormat" : {
+                    "type": "string",
+                    "optional": true,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "metadata" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PRIVATE"
+        },
+        "retrieveAluno": {
+            "endpointType" : "command",
+            "kind": "retrieve",
+            "documentation": "The 'retrieve' request primitive for the Aluno entity.",
+            "input" : {
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": false,
+                    "multivalued": false,
+                	"readOnly": true
+                }
+            },
+            "output" : "aluno",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createAluno": {
+            "endpointType" : "command",
+            "kind": "create",
+            "documentation": "The 'create' request primitive for the Aluno entity.",
+            "input" : "aluno",
+            "output" : "aluno",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "getDependencies": {
+            "endpointType" : "command",
+            "kind": "query",
+            "documentation": "Returns a list with all dependencies from this service, along with their respective versions",
+            "idempotent": true,
+            "output" : {
+                "dependencies" : {
+                    "type": "dependency",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "exportMateria": {
+            "endpointType" : "command",
+            "kind": "query",
+            "idempotent": true,
+            "input" : {
+                "config" : {
+                    "type": "exportConfig",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "exportJobId" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createBulkProfessor": {
+            "endpointType" : "command",
+            "kind": "createBulk",
+            "documentation": "The 'createBulk' request primitive for the Professor entity.",
+            "input" : {
+                "entities" : {
+                    "type": "professor",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "updateMateria": {
+            "endpointType" : "command",
+            "kind": "update",
+            "documentation": "The 'update' request primitive for the Materia entity.",
+            "input" : "materia",
+            "output" : "materia",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createMergeProfessor": {
+            "endpointType" : "command",
+            "kind": "createMerge",
+            "documentation": "The 'createMerge' request primitive for the Professor entity.",
+            "input" : "professor",
+            "output" : "professor",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "updateTurma": {
+            "endpointType" : "command",
+            "kind": "update",
+            "documentation": "The 'update' request primitive for the Turma entity.",
+            "input" : "turma",
+            "output" : "turma",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createMergeMateria": {
+            "endpointType" : "command",
+            "kind": "createMerge",
+            "documentation": "The 'createMerge' request primitive for the Materia entity.",
+            "input" : "materia",
+            "output" : "materia",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "exportAluno": {
+            "endpointType" : "command",
+            "kind": "query",
+            "idempotent": true,
+            "input" : {
+                "config" : {
+                    "type": "exportConfig",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "exportJobId" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "updateMergeTurma": {
+            "endpointType" : "command",
+            "kind": "updateMerge",
+            "documentation": "The 'updateMerge' request primitive for the Turma entity.",
+            "input" : "turma",
+            "output" : "turma",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "listAluno": {
+            "endpointType" : "command",
+            "kind": "list",
+            "documentation": "The 'list' request primitive for the Aluno entity.",
+            "input" : {
+                "offset" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "size" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "orderBy" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "filter" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "displayFields" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "contents" : {
+                    "type": "aluno",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createTurma": {
+            "endpointType" : "command",
+            "kind": "create",
+            "documentation": "The 'create' request primitive for the Turma entity.",
+            "input" : "turma",
+            "output" : "turma",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "createMergeAluno": {
+            "endpointType" : "command",
+            "kind": "createMerge",
+            "documentation": "The 'createMerge' request primitive for the Aluno entity.",
+            "input" : "aluno",
+            "output" : "aluno",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "importTurma": {
+            "endpointType" : "command",
+            "kind": "action",
+            "input" : {
+                "config" : {
+                    "type": "importConfig",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "importJobId" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "retrieveTurma": {
+            "endpointType" : "command",
+            "kind": "retrieve",
+            "documentation": "The 'retrieve' request primitive for the Turma entity.",
+            "input" : {
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": false,
+                    "multivalued": false,
+                	"readOnly": true
+                }
+            },
+            "output" : "turma",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "updateMergeAluno": {
+            "endpointType" : "command",
+            "kind": "updateMerge",
+            "documentation": "The 'updateMerge' request primitive for the Aluno entity.",
+            "input" : "aluno",
+            "output" : "aluno",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "retrieveMateria": {
+            "endpointType" : "command",
+            "kind": "retrieve",
+            "documentation": "The 'retrieve' request primitive for the Materia entity.",
+            "input" : {
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": false,
+                    "multivalued": false,
+                	"readOnly": true
+                }
+            },
+            "output" : "materia",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "deleteAluno": {
+            "endpointType" : "command",
+            "kind": "delete",
+            "documentation": "The 'delete' request primitive for the Aluno entity.",
+            "input" : {
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": false,
+                    "multivalued": false,
+                	"readOnly": true
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "deleteProfessor": {
+            "endpointType" : "command",
+            "kind": "delete",
+            "documentation": "The 'delete' request primitive for the Professor entity.",
+            "input" : {
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": false,
+                    "multivalued": false,
+                	"readOnly": true
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "retrieveProfessor": {
+            "endpointType" : "command",
+            "kind": "retrieve",
+            "documentation": "The 'retrieve' request primitive for the Professor entity.",
+            "input" : {
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": false,
+                    "multivalued": false,
+                	"readOnly": true
+                }
+            },
+            "output" : "professor",
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "deleteTurma": {
+            "endpointType" : "command",
+            "kind": "delete",
+            "documentation": "The 'delete' request primitive for the Turma entity.",
+            "input" : {
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": false,
+                    "multivalued": false,
+                	"readOnly": true
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "helloWorld": {
+            "endpointType" : "command",
+            "kind": "query",
+            "idempotent": true,
+            "input" : {
+                "who" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "helloWorldMessage" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PRIVATE"
+        },
+        "importProfessor": {
+            "endpointType" : "command",
+            "kind": "action",
+            "input" : {
+                "config" : {
+                    "type": "importConfig",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "output" : {
+                "importJobId" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        }
+    },
+    "signals" : {
+    },
+    "events" : {
+        "serviceStarted": {
+            "endpointType" : "event",
+            "documentation" : "Default 'serviceStarted' event.",
+            "payload" : {
+                "domain" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "service" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PRIVATE"
+        },
+        "notifyUserEvent": {
+            "endpointType" : "event",
+            "documentation" : "Default 'notifyUser' event.",
+            "payload" : "notifyUserEventPayload",
+            "extensionPoint" : false,
+            "visibility" : "PRIVATE"
+        },
+        "importAlunoEvent": {
+            "endpointType" : "event",
+            "payload" : {
+                "eventpl" : {
+                    "type": "importEventStatus",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "exportAlunoEvent": {
+            "endpointType" : "event",
+            "payload" : {
+                "eventpl" : {
+                    "type": "exportEventStatus",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "importProfessorEvent": {
+            "endpointType" : "event",
+            "payload" : {
+                "eventpl" : {
+                    "type": "importEventStatus",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "exportProfessorEvent": {
+            "endpointType" : "event",
+            "payload" : {
+                "eventpl" : {
+                    "type": "exportEventStatus",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "importMateriaEvent": {
+            "endpointType" : "event",
+            "payload" : {
+                "eventpl" : {
+                    "type": "importEventStatus",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "exportMateriaEvent": {
+            "endpointType" : "event",
+            "payload" : {
+                "eventpl" : {
+                    "type": "exportEventStatus",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "importTurmaEvent": {
+            "endpointType" : "event",
+            "payload" : {
+                "eventpl" : {
+                    "type": "importEventStatus",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        },
+        "exportTurmaEvent": {
+            "endpointType" : "event",
+            "payload" : {
+                "eventpl" : {
+                    "type": "exportEventStatus",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            },
+            "extensionPoint" : false,
+            "visibility" : "PUBLIC"
+        }
+    },
+    "records": {
+        "aluno" : {
+            "id" : {
+                "type": "string",
+                "format": "uuid",
+                "optional": true,
+                "multivalued": false,
+            	"readOnly": true
+            },
+            "nome" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "dataNascimento" : {
+                "type": "date",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "cpf" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "devedor" : {
+                "type": "boolean",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            ,
+            	"default": false
+            }
+        },
+        "professor" : {
+            "id" : {
+                "type": "string",
+                "format": "uuid",
+                "optional": true,
+                "multivalued": false,
+            	"readOnly": true
+            },
+            "nome" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "dataNascimento" : {
+                "type": "date",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "cpf" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "materia" : {
+            "id" : {
+                "type": "string",
+                "format": "uuid",
+                "optional": true,
+                "multivalued": false,
+            	"readOnly": true
+            },
+            "nome" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "turma" : {
+            "id" : {
+                "type": "string",
+                "format": "uuid",
+                "optional": true,
+                "multivalued": false,
+            	"readOnly": true
+            },
+            "materia" : {
+                "type": "materia",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "professor" : {
+                "type": "professor",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "alunos" : {
+                "type": "aluno",
+                "optional": false,
+                "multivalued": true,
+                "readOnly": false
+            },
+            "vagas" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "notifyUserEventPayload" : {
+            "notificationClass" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationOrigin" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationKind" : {
+                "type": "userNotificationKind",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationPriority" : {
+                "type": "userNotificationPriority",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationSubject" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationContent" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "sourceDomain" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "sourceService" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "destinationUser" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "link" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "emailNotifyUserEventPayload" : {
+            "notificationClass" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationOrigin" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationKind" : {
+                "type": "userNotificationKind",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationPriority" : {
+                "type": "userNotificationPriority",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationSubject" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationContent" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "sourceDomain" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "sourceService" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "destinationUser" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "link" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "from" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "sendTo" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": true,
+                "readOnly": false
+            },
+            "format" : {
+                "type": "eventEmailFormat",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "pushNotifyUserEventPayload" : {
+            "notificationClass" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationOrigin" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationKind" : {
+                "type": "userNotificationKind",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationPriority" : {
+                "type": "userNotificationPriority",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationSubject" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "notificationContent" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "sourceDomain" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "sourceService" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "destinationUser" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "link" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "applicationId" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "blobReference" : {
+            "domainName" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "serviceName" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "targetObjectId" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "targetCopyId" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "basicErrorPayload" : {
+            "message" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "errorCode" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "importError" : {
+            "errorType" : {
+                "type": "errorType",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "lineNumber" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "bean" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "message" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "exceptionClass" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "fielddto" : {
+            "id" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "name" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "fieldType" : {
+                "type": "fieldType",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "start" : {
+                "type": "integer",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "size" : {
+                "type": "integer",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "maskPattern" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "hookdto" : {
+            "hookFunction" : {
+                "type": "hookFunction",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "script" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "layoutdto" : {
+            "id" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "description" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "fileFormat" : {
+                "type": "fileFormat",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "errorStrategy" : {
+                "type": "errorStrategy",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "delimiter" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "skipLines" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "fields" : {
+                "type": "fielddto",
+                "optional": false,
+                "multivalued": true,
+                "readOnly": false
+            },
+            "hooks" : {
+                "type": "hookdto",
+                "optional": true,
+                "multivalued": true,
+                "readOnly": false
+            }
+        },
+        "importReport" : {
+            "id" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "startTime" : {
+                "type": "dateTime",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "endTime" : {
+                "type": "dateTime",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "uri" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "beanClass" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "serviceClass" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "layout" : {
+                "type": "layoutdto",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "sucessCount" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "errorsCount" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "filteredCount" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "skippedCount" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "importErrors" : {
+                "type": "importError",
+                "optional": true,
+                "multivalued": true,
+                "readOnly": false
+            }
+        },
+        "exportEventStatus" : {
+            "importerId" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "eventType" : {
+                "type": "eventType",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "recordCount" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "importEventStatus" : {
+            "importerId" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "eventType" : {
+                "type": "eventType",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "status" : {
+                "type": "status",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "errorMessage" : {
+                "type": "string",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "recordCount" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "importReport" : {
+                "type": "importReport",
+                "optional": true,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "exportConfig" : {
+            "uri" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "layout" : {
+                "type": "layoutdto",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "async" : {
+                "type": "boolean",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "errorStrategy" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "importConfig" : {
+            "uri" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "layout" : {
+                "type": "layoutdto",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "async" : {
+                "type": "boolean",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "batchSize" : {
+                "type": "integer",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "errorStrategy" : {
+                "type": "errorStrategy",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        },
+        "dependency" : {
+            "domain" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "service" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            },
+            "version" : {
+                "type": "string",
+                "optional": false,
+                "multivalued": false,
+                "readOnly": false
+            }
+        }
+    },
+    "enumerations": {
+        "userNotificationKind" : [ 
+            "Operational",
+            "Management",
+            "News"
+        ],
+        "userNotificationPriority" : [ 
+            "Error",
+            "Alert",
+            "None"
+        ],
+        "eventEmailFormat" : [ 
+            "HTML",
+            "PLAIN_TEXT"
+        ],
+        "fieldType" : [ 
+            "BINARY",
+            "BOOLEAN",
+            "DATE",
+            "DATETIME",
+            "DOUBLE",
+            "ENUM",
+            "INTEGER",
+            "MONEY",
+            "STRING",
+            "TIME"
+        ],
+        "fileFormat" : [ 
+            "CSV",
+            "FLAT",
+            "JSON",
+            "XML"
+        ],
+        "hookFunction" : [ 
+            "BEFORE_PARSE",
+            "BEFORE_CONVERSION",
+            "ON_ERROR",
+            "VALIDATE"
+        ],
+        "eventType" : [ 
+            "CHUNK",
+            "DOWNLOAD",
+            "ERROR",
+            "FINISH",
+            "START"
+        ],
+        "errorStrategy" : [ 
+            "CALL_SCRIPT",
+            "IGNORE",
+            "STOP"
+        ],
+        "status" : [ 
+            "DONE",
+            "DONE_WITH_ERRORS",
+            "DOWNLOADING",
+            "ERROR",
+            "NOT_STARTED",
+            "RUNNING"
+        ],
+        "errorType" : [ 
+            "CONVERT_ERROR",
+            "SERVICE_ERROR"
+        ]
+    },
+    "entities" : {
+        "aluno" : {
+            "id": "id",
+            "customizable": false,
+            "slots": { 
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": true,
+                    "multivalued": false,
+                	"readOnly": true
+                },
+                "nome" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "dataNascimento" : {
+                    "type": "date",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "cpf" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "devedor" : {
+                    "type": "boolean",
+                    "optional": true,
+                    "multivalued": false,
+                    "readOnly": false
+                ,
+                	"default": false
+                }
+            }    
+        },
+        "professor" : {
+            "id": "id",
+            "customizable": false,
+            "slots": { 
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": true,
+                    "multivalued": false,
+                	"readOnly": true
+                },
+                "nome" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "dataNascimento" : {
+                    "type": "date",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "cpf" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            }    
+        },
+        "materia" : {
+            "id": "id",
+            "customizable": false,
+            "slots": { 
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": true,
+                    "multivalued": false,
+                	"readOnly": true
+                },
+                "nome" : {
+                    "type": "string",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            }    
+        },
+        "turma" : {
+            "id": "id",
+            "customizable": false,
+            "slots": { 
+                "id" : {
+                    "type": "string",
+                    "format": "uuid",
+                    "optional": true,
+                    "multivalued": false,
+                	"readOnly": true
+                },
+                "materia" : {
+                    "type": "materia",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "professor" : {
+                    "type": "professor",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                },
+                "alunos" : {
+                    "type": "aluno",
+                    "optional": false,
+                    "multivalued": true,
+                    "readOnly": false
+                },
+                "vagas" : {
+                    "type": "integer",
+                    "optional": false,
+                    "multivalued": false,
+                    "readOnly": false
+                }
+            }    
+        }
+    }
+	,
+	"versions": {
+	}
+}

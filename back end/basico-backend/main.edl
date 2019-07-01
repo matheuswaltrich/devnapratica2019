@@ -1,0 +1,27 @@
+domain furb
+
+entities {
+	generateExtraResources : true
+    securityType : secure
+	enumType : ordinal
+}
+
+service basico {
+	entities{
+       	
+       	entity turma{
+            relationships{
+                OneToMany(alunos){
+                    type: aggregation
+                    //cascadeType: all
+                }
+                ManyToOne(materia){
+                    type: aggregation
+                }
+                ManyToOne(professor){
+                    type: aggregation
+                }
+            }
+       	}       	       	
+    }
+}

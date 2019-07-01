@@ -1,0 +1,68 @@
+domain furb
+
+service basico {
+    endpoints {
+        // add actions, queries, events and signals here
+        query helloWorld {
+            in {
+                who : string
+            }
+            out {
+                helloWorldMessage : string
+            }
+        }
+        
+    }
+    types {
+    }
+    entities {		
+		"aluno"
+		fixed entity aluno{
+		    "Chave primaria"
+		    id: uuid?
+		    "Nome do aluno"
+		    nome: string
+		    "Data de nascimento"
+		    dataNascimento: date
+		    "CPF do cliente"
+		    cpf: string
+		    "Pagamento em dia"
+		    devedor: boolean? default: false
+		}		
+		
+		"professor"
+		fixed entity professor{
+		    "Chave primaria"
+		    id: uuid?
+		    "Nome do professor"
+		    nome: string
+		    "Data de nascimento"
+		    dataNascimento: date
+		    "CPF do cliente"
+		    cpf: string		    
+		}
+		
+		"materia"
+		fixed entity materia{
+			"Chave primaria"
+		    id: uuid?
+		    "nome Materia"
+		    nome: string
+		}
+		
+		"turma"
+		fixed entity turma{
+			"Chave primaria"
+		    id: uuid?
+		    "Materia Turma"
+		    materia: materia
+		    "Professor Materia"
+		    professor: professor
+		    "Alunos Tuma"
+		    alunos: aluno*
+		    "Quantidade Vagas Turma"
+		    vagas: integer
+		}
+			
+    }
+}
